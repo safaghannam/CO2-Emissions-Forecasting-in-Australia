@@ -84,7 +84,7 @@ These metrics are widely used in emissions forecasting literature and provide co
 
 ```bash
 git clone https://github.com/safaghannam/CO2-Emissions-Forecasting-in-Australia.git
-
+```
 2. Open the Google Colab Notebook directly in your browser:
 
 https://colab.research.google.com/github/safaghannam/CO2-Emissions-Forecasting-in-Australia/blob/main/CO2_Forecasting_Models.ipynb
