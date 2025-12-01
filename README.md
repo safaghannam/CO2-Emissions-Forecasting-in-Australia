@@ -79,6 +79,13 @@ These metrics are widely used in emissions forecasting literature and provide co
 - Libraries: `numpy`, `pandas`, `scikit-learn`, `xgboost`, `keras`, `tensorflow`, `statsmodels`, `shap`, `matplotlib`  
 
 ## How to Run
-1. Clone the repository:  
-   ```bash
-   git clone https://github.com/safaghannam/CO2-Emissions-Forecasting-in-Australia.git
+
+1. Clone the repository (optional if using Colab directly):
+
+```bash
+git clone https://github.com/safaghannam/CO2-Emissions-Forecasting-in-Australia.git
+
+2. Open the Google Colab Notebook directly in your browser:
+
+https://colab.research.google.com/github/safaghannam/CO2-Emissions-Forecasting-in-Australia/blob/main/CO2_Forecasting_Models.ipynb
+
