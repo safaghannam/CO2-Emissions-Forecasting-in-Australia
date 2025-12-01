@@ -1,6 +1,6 @@
-# An Explainable Comparative Study of Statistical, Machine Learning, Deep Learning, and Hybrid Models for CO₂ Emissions Forecasting in Australia
+# CO₂ Emissions Forecasting in Australia
 
-Reproducible Python implementation of thirteen forecasting models—including statistical, machine learning, deep learning, and hybrid approaches—for national CO₂ emissions in Australia (1982–2022), with explainable insights using SHAP. This repository provides all code and data sources needed to reproduce the results presented in the corresponding manuscript.
+Reproducible Python implementation of thirteen forecasting models—including statistical, machine learning, deep learning, and hybrid approaches—for national CO₂ emissions in Australia (1982–2022), with explainable insights using SHAP. This repository provides all code and instructions needed to reproduce the results presented in the corresponding manuscript.
 
 ## Data
 All datasets used in this study are publicly available:
@@ -8,15 +8,15 @@ All datasets used in this study are publicly available:
 - **Our World in Data (OWID) CO₂ and greenhouse gas emissions:** [https://ourworldindata.org/co2-and-greenhouse-gas-emissions](https://ourworldindata.org/co2-and-greenhouse-gas-emissions)  
 - **Australian Energy Update 2024:** [https://www.energy.gov.au/publications/australian-energy-update-2024](https://www.energy.gov.au/publications/australian-energy-update-2024)
 
-### Data Overview
-The study uses **annual national-level Australian data from 1982 to 2022**. A total of 22 factors were selected, covering energy consumption, fossil fuel use, electricity generation, economic output, population dynamics, and land-use change CO₂ emissions. These variables serve as input features for all forecasting models.
+### Data Usage
+Although the datasets contain many variables, this study uses **22 selected factors** covering energy consumption, fossil fuel use, electricity generation, economic output, population dynamics, and land-use change CO₂ emissions. These variables serve as input features for all forecasting models. Users running the code should ensure these 22 factors are available from the original sources.
 
 **Summary of Key Influencing Factors:**
 
 | Factor | Unit | Description |
 |--------|------|-------------|
 | CO₂ emissions | Mt CO₂ | Total carbon dioxide emissions |
-| Total greenhouse gas emissions excluding land use change | Mt CO₂-e | Total GHG emissions excluding emissions from land use, land-use change, and forestry |
+| Total greenhouse gas emissions excluding land use change | Mt CO₂-e | Total GHG emissions excluding land-use change and forestry |
 | Gross Domestic Product (GDP) | Billion AUD | Total market value of goods and services produced |
 | Consumption (Total Energy Consumption) | PJ | Total energy used across all energy types |
 | Electricity supply | PJ | Total electricity supplied |
@@ -56,25 +56,23 @@ A total of **13 forecasting models** were implemented and evaluated:
 12. Recurrent Neural Network (RNN)  
 13. Gated Recurrent Unit (GRU)  
 
-> **Note:** LSTM, RNN, and GRU models are trained on sequence-shaped input `(samples, features, 1)`.
-
 ### Model Evaluation
 - **Training and validation:** Data from **1982 to 2015** was used. For each random seed, an **80/20 split** was applied internally to create training and validation sets for model tuning.  
 - **Testing:** A separate dataset from **2016 to 2022** was used exclusively for evaluating model generalization on unseen data.  
 - Each model was run **30 times with different random seeds** to ensure robust performance.  
-- Hyperparameter tuning was performed for tree-based models, SVR, MLP, and sequence models to optimize performance.  
-- Evaluation metrics included:
+- Hyperparameter tuning was performed for tree-based models, SVR, MLP, and sequence models.  
 
 ### Evaluation Metrics
-- **Mean Squared Error (MSE)**  
-- **Root Mean Squared Error (RMSE)**  
-- **R-squared (R²)**  
-- **Mean Absolute Error (MAE)**  
-- **Mean Absolute Percentage Error (MAPE)**  
-- **Mean Squared Log Error (MSLE)**  
-- **Median Absolute Error (MedAE)**  
+- Mean Squared Error (MSE)  
+- Root Mean Squared Error (RMSE)  
+- R-squared (R²)  
+- Mean Absolute Error (MAE)  
+- Mean Absolute Percentage Error (MAPE)  
+- Mean Squared Log Error (MSLE)  
+- Median Absolute Error (MedAE)  
 
-These metrics provide complementary perspectives on model performance and are widely used in emissions forecasting literature.
+These metrics are widely used in emissions forecasting literature and provide complementary perspectives on model performance.
+
 
 ## Requirements
 - Python 3.8+  
